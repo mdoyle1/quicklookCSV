@@ -2,6 +2,8 @@
 
 ![Logo](https://github.com/mdoyle1/quicklookCSV/blob/master/quicklookCSV/Assets.xcassets/AppIcon.appiconset/Icon-76.png?raw=true)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%20--%20watchOS-lightgrey) ![Commit](https://img.shields.io/github/last-commit/mdoyle1/quicklookCSV) ![Dependency](https://img.shields.io/badge/SwiftCSV-0.5.6-red) ![Dependency](https://img.shields.io/badge/ScannerOverlay-1.0.1-orange) ![Dependency](https://img.shields.io/badge/SwiftUIRefresh-0.0.3-blue)
+
+
 Use string searching to quickly find specific data within a CSV. Perform various functions to help narrow down your search, export and share data. Quicklook works with a flat CSV database containing headers and rows. The headers must be in the first row followed by additional rows.
 
   - Search & Customize CSVs
