@@ -14,15 +14,39 @@
 		8B23A72124853F00005B0E41 /* ZoomIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B23A72024853F00005B0E41 /* ZoomIN.swift */; };
 		8B376C3A24A403E900DBBAB5 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B376C3924A403E900DBBAB5 /* ItemView.swift */; };
 		8B37E1EA24891F430090B6B7 /* ImportExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37E1E924891F420090B6B7 /* ImportExport.swift */; };
+		8B3D2DDD2561B7AE00F8D02F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D2DDC2561B7AE00F8D02F /* CustomButton.swift */; };
+		8B3D2DF82561C62C00F8D02F /* AllListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D2DF72561C62C00F8D02F /* AllListView.swift */; };
+		8B3D2E1525622A4800F8D02F /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D2E1425622A4800F8D02F /* SearchList.swift */; };
+		8B3D2E352562C00400F8D02F /* FileSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D2E342562C00400F8D02F /* FileSearchBar.swift */; };
 		8B41382724D6E9BA00A09F07 /* NewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41382624D6E9BA00A09F07 /* NewFile.swift */; };
-		8B41382924D6EBA100A09F07 /* TopMainMenuNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41382824D6EBA100A09F07 /* TopMainMenuNavBar.swift */; };
 		8B4326C024E1CB1000F03C46 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4326BF24E1CB1000F03C46 /* CodeScanner.swift */; };
+		8B461746255482BF00285F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B461745255482BF00285F86 /* Assets.xcassets */; };
+		8B46174D255482BF00285F86 /* watchCSV Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8B46174C255482BF00285F86 /* watchCSV Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8B461752255482BF00285F86 /* quicklookCSVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461751255482BF00285F86 /* quicklookCSVApp.swift */; };
+		8B461754255482BF00285F86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461753255482BF00285F86 /* ContentView.swift */; };
+		8B461756255482BF00285F86 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461755255482BF00285F86 /* NotificationController.swift */; };
+		8B461758255482BF00285F86 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461757255482BF00285F86 /* NotificationView.swift */; };
+		8B46175A255482BF00285F86 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461759255482BF00285F86 /* ComplicationController.swift */; };
+		8B46175C255482C000285F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B46175B255482C000285F86 /* Assets.xcassets */; };
+		8B46175F255482C000285F86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B46175E255482C000285F86 /* Preview Assets.xcassets */; };
+		8B461764255482C000285F86 /* watchCSV.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8B461743255482BD00285F86 /* watchCSV.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8B461773255483C100285F86 /* ConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461772255483C100285F86 /* ConnectivityProvider.swift */; };
+		8B46177A255483E300285F86 /* ConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461779255483E300285F86 /* ConnectivityProvider.swift */; };
+		8B4617802554855100285F86 /* ControlCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD37FA5247EDA5700A38285 /* ControlCenter.swift */; };
+		8B4617972554DB9100285F86 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4617962554DB9100285F86 /* SharedUserDefaults.swift */; };
+		8B4617982554DB9100285F86 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4617962554DB9100285F86 /* SharedUserDefaults.swift */; };
+		8B4617BF2554FA4C00285F86 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4617BD2554FA4C00285F86 /* SwiftUIView.swift */; };
+		8B4617CF2556364D00285F86 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD37FAB247EDBA600A38285 /* Sorting.swift */; };
+		8B461823255CDF4600285F86 /* CSVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B461822255CDF4600285F86 /* CSVListView.swift */; };
 		8B4AB52024D9E42F00A5755E /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AB51F24D9E42F00A5755E /* TextRecognizer.swift */; };
 		8B4AB52324DB34E100A5755E /* ScannerOverlay in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4AB52224DB34E100A5755E /* ScannerOverlay */; };
 		8B4AB52524DC335200A5755E /* InitializerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AB52424DC335200A5755E /* InitializerFunctions.swift */; };
 		8B4C163A24912C0E00B26BB4 /* UpdateHeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C163924912C0E00B26BB4 /* UpdateHeaderName.swift */; };
 		8B4C163C24928A6E00B26BB4 /* LocalAndCloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C163B24928A6E00B26BB4 /* LocalAndCloudFiles.swift */; };
 		8B4C163E249316CD00B26BB4 /* FootNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C163D249316CC00B26BB4 /* FootNavBar.swift */; };
+		8B53E828255EF1A300CA96DB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53E827255EF1A300CA96DB /* SearchBar.swift */; };
+		8B53E839255F832200CA96DB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CE5E2248C3D45008C9C13 /* DataManager.swift */; };
+		8B53E840255F86CE00CA96DB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B53E83F255F86CE00CA96DB /* CloudKit.framework */; };
 		8B8CE5D7248A9242008C9C13 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CE5D6248A9242008C9C13 /* Total.swift */; };
 		8B8CE5D9248AA755008C9C13 /* SelectableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CE5D8248AA755008C9C13 /* SelectableText.swift */; };
 		8B8CE5DB248AB1C5008C9C13 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CE5DA248AB1C4008C9C13 /* ActivityIndicator.swift */; };
@@ -58,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8B46174E255482BF00285F86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD37F67247ED9B000A38285 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B46174B255482BF00285F86;
+			remoteInfo = "watchCSV Extension";
+		};
+		8B461762255482C000285F86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD37F67247ED9B000A38285 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B461742255482BD00285F86;
+			remoteInfo = watchCSV;
+		};
 		8BD37F86247ED9B300A38285 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8BD37F67247ED9B000A38285 /* Project object */;
@@ -74,6 +112,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8B461765255482C000285F86 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8B461764255482C000285F86 /* watchCSV.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B461768255482C000285F86 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8B46174D255482BF00285F86 /* watchCSV Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B23A711247FE245005B0E41 /* CSVList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVList.swift; sourceTree = "<group>"; };
 		8B23A71424815896005B0E41 /* ImportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportButton.swift; sourceTree = "<group>"; };
@@ -82,14 +145,39 @@
 		8B23A72024853F00005B0E41 /* ZoomIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomIN.swift; sourceTree = "<group>"; };
 		8B376C3924A403E900DBBAB5 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		8B37E1E924891F420090B6B7 /* ImportExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExport.swift; sourceTree = "<group>"; };
+		8B3D2DDC2561B7AE00F8D02F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8B3D2DF72561C62C00F8D02F /* AllListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListView.swift; sourceTree = "<group>"; };
+		8B3D2E1425622A4800F8D02F /* SearchList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
+		8B3D2E342562C00400F8D02F /* FileSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSearchBar.swift; sourceTree = "<group>"; };
 		8B41382624D6E9BA00A09F07 /* NewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFile.swift; sourceTree = "<group>"; };
-		8B41382824D6EBA100A09F07 /* TopMainMenuNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMainMenuNavBar.swift; sourceTree = "<group>"; };
 		8B4326BF24E1CB1000F03C46 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
+		8B461743255482BD00285F86 /* watchCSV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchCSV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B461745255482BF00285F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B461747255482BF00285F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B46174C255482BF00285F86 /* watchCSV Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchCSV Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B461751255482BF00285F86 /* quicklookCSVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quicklookCSVApp.swift; sourceTree = "<group>"; };
+		8B461753255482BF00285F86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B461755255482BF00285F86 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8B461757255482BF00285F86 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8B461759255482BF00285F86 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		8B46175B255482C000285F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B46175E255482C000285F86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B461760255482C000285F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B461761255482C000285F86 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8B461772255483C100285F86 /* ConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityProvider.swift; sourceTree = "<group>"; };
+		8B461779255483E300285F86 /* ConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityProvider.swift; sourceTree = "<group>"; };
+		8B4617902554DB3C00285F86 /* watchCSV Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchCSV Extension.entitlements"; sourceTree = "<group>"; };
+		8B4617962554DB9100285F86 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		8B4617BD2554FA4C00285F86 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		8B461822255CDF4600285F86 /* CSVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVListView.swift; sourceTree = "<group>"; };
+		8B492CFC2560A5DF00C23473 /* watchCSV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watchCSV.entitlements; sourceTree = "<group>"; };
 		8B4AB51F24D9E42F00A5755E /* TextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		8B4AB52424DC335200A5755E /* InitializerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerFunctions.swift; sourceTree = "<group>"; };
 		8B4C163924912C0E00B26BB4 /* UpdateHeaderName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHeaderName.swift; sourceTree = "<group>"; };
 		8B4C163B24928A6E00B26BB4 /* LocalAndCloudFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAndCloudFiles.swift; sourceTree = "<group>"; };
 		8B4C163D249316CC00B26BB4 /* FootNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootNavBar.swift; sourceTree = "<group>"; };
+		8B53E827255EF1A300CA96DB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		8B53E83F255F86CE00CA96DB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		8B8CE5D6248A9242008C9C13 /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		8B8CE5D8248AA755008C9C13 /* SelectableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableText.swift; sourceTree = "<group>"; };
 		8B8CE5DA248AB1C4008C9C13 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -97,7 +185,7 @@
 		8B8CE5E0248C3C31008C9C13 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8B8CE5E2248C3D45008C9C13 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8BB4968C24D9E0D900FFF758 /* RecongizedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecongizedText.swift; sourceTree = "<group>"; };
-		8BB4968E24D9E0E700FFF758 /* ScanningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanningView.swift; path = "../../../../../Documents/Apps/quicklookCSV 2/quicklookCSV/Helpers/TextRecognizer/ScanningView.swift"; sourceTree = "<group>"; };
+		8BB4968E24D9E0E700FFF758 /* ScanningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
 		8BB5F1D1248CB14500484A99 /* PinchToZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchToZoom.swift; sourceTree = "<group>"; };
 		8BD37F6F247ED9B000A38285 /* quicklookCSV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quicklookCSV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD37F72247ED9B000A38285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +218,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B461749255482BF00285F86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B53E840255F86CE00CA96DB /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BD37F6C247ED9B000A38285 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,7 +260,13 @@
 				8BD37FB1247EDC0100A38285 /* TopNavbarButtons.swift */,
 				8B23A71424815896005B0E41 /* ImportButton.swift */,
 				8B23A716248158FF005B0E41 /* ColumnButton.swift */,
-				8B41382824D6EBA100A09F07 /* TopMainMenuNavBar.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8B3D2DAF2560C9B800F8D02F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -185,9 +287,53 @@
 			path = CodeScanner;
 			sourceTree = "<group>";
 		};
+		8B461744255482BD00285F86 /* watchCSV */ = {
+			isa = PBXGroup;
+			children = (
+				8B492CFC2560A5DF00C23473 /* watchCSV.entitlements */,
+				8B461745255482BF00285F86 /* Assets.xcassets */,
+				8B461747255482BF00285F86 /* Info.plist */,
+			);
+			path = watchCSV;
+			sourceTree = "<group>";
+		};
+		8B461750255482BF00285F86 /* watchCSV Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D2DAF2560C9B800F8D02F /* Buttons */,
+				8B4617902554DB3C00285F86 /* watchCSV Extension.entitlements */,
+				8B53E827255EF1A300CA96DB /* SearchBar.swift */,
+				8B461751255482BF00285F86 /* quicklookCSVApp.swift */,
+				8B461779255483E300285F86 /* ConnectivityProvider.swift */,
+				8B461753255482BF00285F86 /* ContentView.swift */,
+				8B3D2DF72561C62C00F8D02F /* AllListView.swift */,
+				8B3D2DDC2561B7AE00F8D02F /* CustomButton.swift */,
+				8B461822255CDF4600285F86 /* CSVListView.swift */,
+				8B3D2E1425622A4800F8D02F /* SearchList.swift */,
+				8B4617BD2554FA4C00285F86 /* SwiftUIView.swift */,
+				8B461755255482BF00285F86 /* NotificationController.swift */,
+				8B461757255482BF00285F86 /* NotificationView.swift */,
+				8B461759255482BF00285F86 /* ComplicationController.swift */,
+				8B46175B255482C000285F86 /* Assets.xcassets */,
+				8B461760255482C000285F86 /* Info.plist */,
+				8B461761255482C000285F86 /* PushNotificationPayload.apns */,
+				8B46175D255482C000285F86 /* Preview Content */,
+			);
+			path = "watchCSV Extension";
+			sourceTree = "<group>";
+		};
+		8B46175D255482C000285F86 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B46175E255482C000285F86 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		8B8CE5DF248C3C31008C9C13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B53E83F255F86CE00CA96DB /* CloudKit.framework */,
 				8B8CE5E0248C3C31008C9C13 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -210,6 +356,8 @@
 				8BD37F71247ED9B000A38285 /* quicklookCSV */,
 				8BD37F88247ED9B300A38285 /* quicklookCSVTests */,
 				8BD37F93247ED9B300A38285 /* quicklookCSVUITests */,
+				8B461744255482BD00285F86 /* watchCSV */,
+				8B461750255482BF00285F86 /* watchCSV Extension */,
 				8BD37F70247ED9B000A38285 /* Products */,
 				8B8CE5DF248C3C31008C9C13 /* Frameworks */,
 			);
@@ -221,6 +369,8 @@
 				8BD37F6F247ED9B000A38285 /* quicklookCSV.app */,
 				8BD37F85247ED9B300A38285 /* quicklookCSVTests.xctest */,
 				8BD37F90247ED9B300A38285 /* quicklookCSVUITests.xctest */,
+				8B461743255482BD00285F86 /* watchCSV.app */,
+				8B46174C255482BF00285F86 /* watchCSV Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,6 +458,9 @@
 				8B8CE5E2248C3D45008C9C13 /* DataManager.swift */,
 				8BB5F1D1248CB14500484A99 /* PinchToZoom.swift */,
 				8BF901FD248E913800F5CDA6 /* Modifiers.swift */,
+				8B461772255483C100285F86 /* ConnectivityProvider.swift */,
+				8B4617962554DB9100285F86 /* SharedUserDefaults.swift */,
+				8B3D2E342562C00400F8D02F /* FileSearchBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,6 +476,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8B461742255482BD00285F86 /* watchCSV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B46176C255482C000285F86 /* Build configuration list for PBXNativeTarget "watchCSV" */;
+			buildPhases = (
+				8B461741255482BD00285F86 /* Resources */,
+				8B461768255482C000285F86 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B46174F255482BF00285F86 /* PBXTargetDependency */,
+			);
+			name = watchCSV;
+			productName = watchCSV;
+			productReference = 8B461743255482BD00285F86 /* watchCSV.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8B46174B255482BF00285F86 /* watchCSV Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B46176B255482C000285F86 /* Build configuration list for PBXNativeTarget "watchCSV Extension" */;
+			buildPhases = (
+				8B461748255482BF00285F86 /* Sources */,
+				8B461749255482BF00285F86 /* Frameworks */,
+				8B46174A255482BF00285F86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchCSV Extension";
+			productName = "watchCSV Extension";
+			productReference = 8B46174C255482BF00285F86 /* watchCSV Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		8BD37F6E247ED9B000A38285 /* quicklookCSV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD37F99247ED9B300A38285 /* Build configuration list for PBXNativeTarget "quicklookCSV" */;
@@ -330,10 +517,12 @@
 				8BD37F6B247ED9B000A38285 /* Sources */,
 				8BD37F6C247ED9B000A38285 /* Frameworks */,
 				8BD37F6D247ED9B000A38285 /* Resources */,
+				8B461765255482C000285F86 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8B461763255482C000285F86 /* PBXTargetDependency */,
 			);
 			name = quicklookCSV;
 			packageProductDependencies = (
@@ -387,10 +576,16 @@
 		8BD37F67247ED9B000A38285 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = Toxicspu;
 				TargetAttributes = {
+					8B461742255482BD00285F86 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					8B46174B255482BF00285F86 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					8BD37F6E247ED9B000A38285 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -425,11 +620,30 @@
 				8BD37F6E247ED9B000A38285 /* quicklookCSV */,
 				8BD37F84247ED9B300A38285 /* quicklookCSVTests */,
 				8BD37F8F247ED9B300A38285 /* quicklookCSVUITests */,
+				8B461742255482BD00285F86 /* watchCSV */,
+				8B46174B255482BF00285F86 /* watchCSV Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B461741255482BD00285F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B461746255482BF00285F86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B46174A255482BF00285F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B46175F255482C000285F86 /* Preview Assets.xcassets in Resources */,
+				8B46175C255482C000285F86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BD37F6D247ED9B000A38285 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,19 +671,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B461748255482BF00285F86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B461756255482BF00285F86 /* NotificationController.swift in Sources */,
+				8B4617982554DB9100285F86 /* SharedUserDefaults.swift in Sources */,
+				8B3D2DDD2561B7AE00F8D02F /* CustomButton.swift in Sources */,
+				8B461754255482BF00285F86 /* ContentView.swift in Sources */,
+				8B53E839255F832200CA96DB /* DataManager.swift in Sources */,
+				8B4617802554855100285F86 /* ControlCenter.swift in Sources */,
+				8B4617CF2556364D00285F86 /* Sorting.swift in Sources */,
+				8B53E828255EF1A300CA96DB /* SearchBar.swift in Sources */,
+				8B4617BF2554FA4C00285F86 /* SwiftUIView.swift in Sources */,
+				8B3D2DF82561C62C00F8D02F /* AllListView.swift in Sources */,
+				8B46175A255482BF00285F86 /* ComplicationController.swift in Sources */,
+				8B461752255482BF00285F86 /* quicklookCSVApp.swift in Sources */,
+				8B461758255482BF00285F86 /* NotificationView.swift in Sources */,
+				8B3D2E1525622A4800F8D02F /* SearchList.swift in Sources */,
+				8B461823255CDF4600285F86 /* CSVListView.swift in Sources */,
+				8B46177A255483E300285F86 /* ConnectivityProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BD37F6B247ED9B000A38285 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8BD37FA6247EDA5700A38285 /* ControlCenter.swift in Sources */,
 				8BD37FA8247EDB5900A38285 /* CSVaccessability.swift in Sources */,
+				8B461773255483C100285F86 /* ConnectivityProvider.swift in Sources */,
 				8BD37F73247ED9B000A38285 /* AppDelegate.swift in Sources */,
 				8BF90200248E933300F5CDA6 /* PinNewList.swift in Sources */,
 				8B23A712247FE245005B0E41 /* CSVList.swift in Sources */,
 				8BF901FE248E913800F5CDA6 /* Modifiers.swift in Sources */,
 				8B8CE5DB248AB1C5008C9C13 /* ActivityIndicator.swift in Sources */,
-				8B41382924D6EBA100A09F07 /* TopMainMenuNavBar.swift in Sources */,
 				8B8CE5E3248C3D45008C9C13 /* DataManager.swift in Sources */,
+				8B4617972554DB9100285F86 /* SharedUserDefaults.swift in Sources */,
+				8B3D2E352562C00400F8D02F /* FileSearchBar.swift in Sources */,
 				8B23A71524815896005B0E41 /* ImportButton.swift in Sources */,
 				8BD37F75247ED9B000A38285 /* SceneDelegate.swift in Sources */,
 				8BD37FB0247EDBEB00A38285 /* Share.swift in Sources */,
@@ -522,6 +761,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8B46174F255482BF00285F86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B46174B255482BF00285F86 /* watchCSV Extension */;
+			targetProxy = 8B46174E255482BF00285F86 /* PBXContainerItemProxy */;
+		};
+		8B461763255482C000285F86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B461742255482BD00285F86 /* watchCSV */;
+			targetProxy = 8B461762255482C000285F86 /* PBXContainerItemProxy */;
+		};
 		8BD37F87247ED9B300A38285 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8BD37F6E247ED9B000A38285 /* quicklookCSV */;
@@ -546,6 +795,110 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8B461766255482C000285F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = watchCSV/watchCSV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4.0;
+				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
+				IBSC_MODULE = watchCSV_Extension;
+				INFOPLIST_FILE = watchCSV/Info.plist;
+				MARKETING_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		8B461767255482C000285F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = watchCSV/watchCSV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4.0;
+				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
+				IBSC_MODULE = watchCSV_Extension;
+				INFOPLIST_FILE = watchCSV/Info.plist;
+				MARKETING_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		8B461769255482C000285F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "watchCSV Extension/watchCSV Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4.0;
+				DEVELOPMENT_ASSET_PATHS = "\"watchCSV Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "watchCSV Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		8B46176A255482C000285F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "watchCSV Extension/watchCSV Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4.0;
+				DEVELOPMENT_ASSET_PATHS = "\"watchCSV Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "watchCSV Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
 		8BD37F97247ED9B300A38285 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -572,6 +925,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -632,6 +986,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -666,7 +1021,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = quicklookCSV/quicklookCSV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4.0;
 				DEVELOPMENT_ASSET_PATHS = "\"quicklookCSV/Preview Content\"";
 				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
 				ENABLE_PREVIEWS = YES;
@@ -675,7 +1030,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -689,7 +1044,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = quicklookCSV/quicklookCSV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4.0;
 				DEVELOPMENT_ASSET_PATHS = "\"quicklookCSV/Preview Content\"";
 				DEVELOPMENT_TEAM = 8K6TR7WW7Q;
 				ENABLE_PREVIEWS = YES;
@@ -698,7 +1053,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.toxicspu.quicklookCSV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -793,6 +1148,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B46176B255482C000285F86 /* Build configuration list for PBXNativeTarget "watchCSV Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B461769255482C000285F86 /* Debug */,
+				8B46176A255482C000285F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B46176C255482C000285F86 /* Build configuration list for PBXNativeTarget "watchCSV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B461766255482C000285F86 /* Debug */,
+				8B461767255482C000285F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8BD37F6A247ED9B000A38285 /* Build configuration list for PBXProject "quicklookCSV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

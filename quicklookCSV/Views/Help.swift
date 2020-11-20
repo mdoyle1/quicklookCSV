@@ -23,7 +23,7 @@ struct Help: View {
                     }
                     VStack(alignment:.leading){
                         Text("""
-Use string searching to quickly find specific data within a CSV. Perform various functions to help narrow down your search, export and share data. Quicklook works with a flat CSV database containing headers and rows. The headers must be in the first row followed by additional rows containing applicable data.
+Use string searching to quickly find specific data within a CSV. Perform various functions to help narrow down your search, export and share data. Quicklook works with a flat CSV database containing headers and rows. The headers must be in the first row followed by additional rows.
 """).font(.subheadline)
                         HStack{Spacer()}
                     }
@@ -33,82 +33,82 @@ Use string searching to quickly find specific data within a CSV. Perform various
                     
                         
                     
-                    Group{
-                        
-                        VStack(alignment:.leading){
-                            Text("Here's what you can do...").font(.system(size: 24)).font(.headline).bold().italic().underline().padding(.bottom, 10)
-                    VStack(alignment: .leading){
-                 
-                        HStack(spacing: 10) {
-                            Text("\u{2022}").bold()
-                            Text("Search & Customize CSVs").bold()
-                        }
-                        HStack(spacing: 10) {
-                            Text("\u{2022}").bold()
-                            Text("Extrapolate CSV data").bold()
-                        }
-                        HStack(spacing: 10) {
-                            Text("\u{2022}").bold()
-                            Text("Scan barcode to search").bold()
-                        }
-                        HStack(spacing: 10) {
-                            Text("\u{2022}").bold()
-                            Text("Save and Share Searches").bold()
-                        }
-                        HStack(spacing: 10) {
-                            Text("\u{2022}").bold()
-                            Text("Sync with iCloud").bold()
-                        }
-                        HStack{Spacer()}
-                    }
-              .padding(.leading, 20)
-                        
-                        }
-                 
-                        
-                        .padding(.all, 10)
-                                      .background(Color(.gray).opacity(0.3))
-                                      .cornerRadius(10)
-                    }
+//                    Group{
+//
+//                        VStack(alignment:.leading){
+//                            Text("Here's what you can do...").font(.system(size: 24)).font(.headline).bold().italic().underline().padding(.bottom, 10)
+//                    VStack(alignment: .leading){
+//
+//                        HStack(spacing: 10) {
+//                            Text("\u{2022}").bold()
+//                            Text("Search & Customize CSVs").bold()
+//                        }
+//                        HStack(spacing: 10) {
+//                            Text("\u{2022}").bold()
+//                            Text("Extrapolate CSV data").bold()
+//                        }
+//                        HStack(spacing: 10) {
+//                            Text("\u{2022}").bold()
+//                            Text("Scan barcode to search").bold()
+//                        }
+//                        HStack(spacing: 10) {
+//                            Text("\u{2022}").bold()
+//                            Text("Save and Share Searches").bold()
+//                        }
+//                        HStack(spacing: 10) {
+//                            Text("\u{2022}").bold()
+//                            Text("Sync with iCloud").bold()
+//                        }
+//                        HStack{Spacer()}
+//                    }
+//              .padding(.leading, 20)
+//
+//                        }
+//
+//
+//                        .padding(.all, 10)
+//                                      .background(Color(.gray).opacity(0.3))
+//                                      .cornerRadius(10)
+//                    }
                     
                     
-                    VStack(alignment:.leading){
-                        Text("Find some interesting data here.").bold().padding(.init(top: 10, leading: 10, bottom: 0, trailing: 0))
-                        VStack{
-                            Text("https://catalog.data.gov/dataset")
-                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
-                                    UIApplication.shared.open(URL(string: "https://catalog.data.gov/dataset")!)
-                            }
-                            
-                        }
-                        .padding(.all, 10)
-                        .background(Color(.systemBackground))
-                        .cornerRadius(10)
-                        .padding(.all, 10)
-                        
-                        Text("Get started with this tutorial!").bold().padding(.init(top: 10, leading: 10, bottom: 0, trailing: 0))
-                        VStack(alignment: .leading){
-                            Text("Begin Searching!")
-                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
-                                    UIApplication.shared.open(URL(string: "https://youtu.be/UwNd5Hz80yY")!)
-                            }
-                            
-                            Text("Scan Barcode to Search.")
-                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
-                                    UIApplication.shared.open(URL(string: "https://youtu.be/ZpC7eikbXBU")!)
-                            }
-                            
-                        }
-                                             .padding(.all, 10)
-                                             .background(Color(.systemBackground))
-                                             .cornerRadius(10)
-                         .padding(.all, 10)
-                        HStack{Spacer()}
-                           
-                    }
+//                    VStack(alignment:.leading){
+//                        Text("Find some interesting data here.").bold().padding(.init(top: 10, leading: 10, bottom: 0, trailing: 0))
+//                        VStack{
+//                            Text("https://catalog.data.gov/dataset")
+//                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
+//                                    UIApplication.shared.open(URL(string: "https://catalog.data.gov/dataset")!)
+//                            }
+//
+//                        }
+//                        .padding(.all, 10)
+//                        .background(Color(.systemBackground))
+//                        .cornerRadius(10)
+//                        .padding(.all, 10)
+//
+//                        Text("Get started with this tutorial!").bold().padding(.init(top: 10, leading: 10, bottom: 0, trailing: 0))
+//                        VStack(alignment: .leading){
+//                            Text("Begin Searching!")
+//                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
+//                                    UIApplication.shared.open(URL(string: "https://youtu.be/UwNd5Hz80yY")!)
+//                            }
+//
+//                            Text("Scan Barcode to Search.")
+//                                .font(.subheadline).foregroundColor(.blue).italic().underline().onTapGesture() {
+//                                    UIApplication.shared.open(URL(string: "https://youtu.be/ZpC7eikbXBU")!)
+//                            }
+//
+//                        }
+//                                             .padding(.all, 10)
+//                                             .background(Color(.systemBackground))
+//                                             .cornerRadius(10)
+//                         .padding(.all, 10)
+//                        HStack{Spacer()}
+//
+//                    }
                    // .padding(.all, 10)
-                    .background(Color(.gray).opacity(0.1))
-                    .cornerRadius(10)
+//                    .background(Color(.gray).opacity(0.1))
+//                    .cornerRadius(10)
                 }
                     Group{
                     HStack{
@@ -202,6 +202,12 @@ Use string searching to quickly find specific data within a CSV. Perform various
                         Text("Text Scanner").font(.title)
                     }
                     Text("Image to text is available by pressing and holding on the Search Bar textfield or an Add Item text field.").padding(.bottom, 10)
+                    
+                    HStack{
+                        Image(systemName: "applewatch").font(.title)
+                        Text("WatchOS").font(.title)
+                    }
+                    Text("Press to force sync a list to your apple watch.  Lists will be automatically sync when opened unless the iOS list is open before the watchOS app.  Press the Apple Watch icon to push the list again.").padding(.bottom, 10)
                 }
                 
             }

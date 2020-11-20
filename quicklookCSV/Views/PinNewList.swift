@@ -25,7 +25,7 @@ struct PinNewList: View {
                     HStack{
                         Button(action:{
                             
-                            self.fileName = self.pasteboard.string ?? ""
+                            self.controlCenter.fileName = self.pasteboard.string ?? ""
                         }){Image(systemName: "doc.on.clipboard.fill").padding(.init(top: 0, leading: 8, bottom: 0, trailing: 8))}
                         
                         TextField("Enter new file name..", text: self.$controlCenter.fileName)

@@ -10,6 +10,12 @@ import Foundation
 import SwiftUI
 import Combine
 
+var currentArray:[String] = []
+struct CSVData {
+    var id = UUID()
+    var Items: [String:String]
+}
+
 struct RecentFiles {
       var dictionary:[String:String]
   }
@@ -36,6 +42,7 @@ class ControlCenter: ObservableObject {
     @Published var newHeaders:[String] = []
     
     @Published var csvArray: [[String:String]] = [[:]]
+
     
     @Published var selectedHeaders:[String] = []
     @Published var exportItems:[String] = []
@@ -53,7 +60,7 @@ class ControlCenter: ObservableObject {
     
     
     @Published var modifiedList: [String] = []
-    @Published var initialList:[String] = []
+    var initialList:[String] = []
     
     
     @Published var currentItem:String = ""
@@ -143,4 +150,9 @@ class ControlCenter: ObservableObject {
     @Published var scannedText:String = ""
     @Published var isShowingScanner = false
     @Published var addItemTextScan = false
+    
+    @Published var currentArray:[String] = []
+    @Published var currentString:String = ""
+    
+    @Published var watchList:[String] = []
 }

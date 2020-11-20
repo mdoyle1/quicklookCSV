@@ -77,7 +77,7 @@ struct SearchBar: UIViewRepresentable {
             self.showsCancelButton = true
         }
         func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-            
+            currentArray = array
         
 //            if text == "" {
 //                if self.controlCenter.selectedHeaders == [] {

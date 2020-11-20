@@ -9,18 +9,21 @@
 import SwiftUI
 import SwiftUIRefresh
 
+var fileName:String = ""
+
 struct LocalAndCloudFiles: View {
     @EnvironmentObject var controlCenter:ControlCenter
     @State var cloudFile:Bool = true
+    @State var array:[String] = []
+    @State var text:String = ""
     @State private var isShowing = false
     @State var shouldPopToRoot = false
+    @ObservedObject var connectivityProvider: ViewModel = ViewModel(connectivityProvider: ConnectivityProvider())
     
     func removeItems(at offsets: IndexSet){
         let itemIndex:Int = offsets.first!
         print(controlCenter.urlFileNames[itemIndex])
-       // controlCenter.recentFiles = controlCenter.recentFiles.sorted(by: {$0.absoluteString < $1.absoluteString} )
         do { try FileManager.default.removeItem(at: controlCenter.urlFileNames[itemIndex].url) } catch { print("unable to delete file")}
-        //controlCenter.recentFiles.remove(at: itemIndex)
         controlCenter.urlFileNames.remove(at:itemIndex)
     }
 
@@ -32,36 +35,28 @@ struct LocalAndCloudFiles: View {
             if self.controlCenter.showHelp == true {
                 Help()
             } else {
+                FileSearchBar(text: $text)
                 List {
+                  
                     ForEach(controlCenter.urlFileNames.sorted(by: { $0.file.lowercased() < $1.file.lowercased()})) { indx in
+                    
+                        if indx.file.lowercased().contains(text.lowercased()) || text == ""{
                         NavigationLink(destination:CSVList().onAppear{
                             //IF THE ITEM IS NOT IN THE CLOUD...
                             if indx.cloud == false {
                                 self.controlCenter.globalPathToCsv = indx.url
                                 self.controlCenter.showLists = true
-                                self.controlCenter.fileName = indx.file}
+                                self.controlCenter.fileName = indx.file
+                                fileName = indx.file
+                                //connectivityProvider.sendName()
+                            }
                                 //OTHERWISE THE ITEM IS IN THE CLOUD...
                             else{
                                 print("The item is in the cloud.")
                                 self.controlCenter.cloudFile = true
                                 self.controlCenter.loading = true
-                                
-                                
                                 downloadCloudFile(control: self.controlCenter, fileURL: indx.url, completion: {
-                                    print("Fetch Files")
-                                    
-                                    //GET FILE AND UPDATE LIST
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                                        csvToList(control: self.controlCenter, completion: {
-                                            self.controlCenter.cloudFile = false
-                                            self.controlCenter.headersViewAccessed = false
-                                            self.controlCenter.loading = false
-                                            self.$controlCenter.searchTerm.wrappedValue = ""
-                                            self.controlCenter.arrayCount=self.controlCenter.initialList.count
-                                            print(self.controlCenter.arrayCount)
-                                            print("FIRST LOAD")})
-                                    }
-                                })
+                                    print("Fetch Files")})
                                 
                             }
                             
@@ -84,12 +79,15 @@ struct LocalAndCloudFiles: View {
                                 }
                             }
                             }
+                            }
                         }
+                        
                     }.onDelete(perform: self.removeItems)
                     
                 }.onAppear{
                     self.controlCenter.cloudFile = false
                 }
+            
                 .pullToRefresh(isShowing: $isShowing) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         print("Refresh")
@@ -99,14 +97,14 @@ struct LocalAndCloudFiles: View {
                     }
                   
                 }
+                
             }
             
         }.onAppear{
+            array = listOfFileNames
         self.controlCenter.urlFileNames = self.controlCenter.urlFileNames.sorted(by: { $0.file.lowercased() < $1.file.lowercased()})
-            resetBools(control:self.controlCenter)
-            emptyArrays(control: self.controlCenter)
-            initializeItems(control: self.controlCenter)
         }
+        //.resignKeyboardOnDragGesture()
     }
 }
 

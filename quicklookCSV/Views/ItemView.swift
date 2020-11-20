@@ -13,6 +13,9 @@ struct ItemView: View {
     @EnvironmentObject var controlCenter: ControlCenter
     @State var itemArray:[String] = []
     @State var itemsBrokenDown: [[String]] = []
+    @State var currentItem:String
+     var headers:[String]
+     var selectedHeaders:[String]
   
     let pasteboard = UIPasteboard.general
     var body: some View {
@@ -27,10 +30,10 @@ struct ItemView: View {
                                 var tmpHeaders:[String] = []
                                 var headerCount:Int = 0
                                 if self.controlCenter.selectedHeaders.count == 0 {
-                                tmpHeaders = self.controlCenter.headers.sorted {$0.localizedCompare($1) == .orderedAscending}
+                                    tmpHeaders = self.headers.sorted {$0.localizedCompare($1) == .orderedAscending}
                                 headerCount = tmpHeaders[item].count+1
                                 }else {
-                                    tmpHeaders = self.controlCenter.selectedHeaders.sorted {$0.localizedCompare($1) == .orderedAscending}
+                                    tmpHeaders = self.selectedHeaders.sorted {$0.localizedCompare($1) == .orderedAscending}
                                     headerCount = tmpHeaders[item].count+1
                                 }
                                 //COPY ITEM VALUE ONLY
@@ -63,17 +66,17 @@ struct ItemView: View {
                             }.padding(.all, 8)
                             
                            .contextMenu {
-                            Button(action: {
-                                let formattedString = self.itemArray[item].components(separatedBy: "\(self.controlCenter.headers[item].trimmingCharacters(in: .whitespacesAndNewlines))"+":")[1]
-                                print("This is your formatted String")
-                            print(formattedString)
-                             guard let url = URL(string: formattedString) else { return }
-                      //       UIApplication.shared.open(url)
-                                 UIApplication.shared.open(URL(string: formattedString)!)
-                             }) {
-                             Text("Open Link")
-                                Image(systemName: "link")
-                                    }
+//                            Button(action: {
+//                                let formattedString = self.itemArray[item].components(separatedBy: "\(self.controlCenter.headers[item].trimmingCharacters(in: .whitespacesAndNewlines))"+":")[1]
+//                                print("This is your formatted String")
+//                            print(formattedString)
+//                             guard let url = URL(string: formattedString) else { return }
+//                      //       UIApplication.shared.open(url)
+//                                 UIApplication.shared.open(URL(string: formattedString)!)
+//                             }) {
+//                             Text("Open Link")
+//                                Image(systemName: "link")
+//                                    }
                             Button(action: {
                             let tel = "tel://"
                             let formattedString = tel +  self.itemArray[item].components(separatedBy: ":")[1].trimmingCharacters(in: .whitespacesAndNewlines)
@@ -93,20 +96,22 @@ struct ItemView: View {
                         
                         
                     .onAppear{
+                        print(self.controlCenter.currentItem)
                         //itemView IS USED FOR THE EXPORT OF DATA.
                         self.controlCenter.itemViewIsShowing = true
                         //itemDidView IS USED TO KEEP THE CSVList FROM RESORTING EVERY TIME A ITEM IS VIEWED
                         self.controlCenter.itemDidView = true
                        // print(self.controlCenter.currentItem)
-                       // self.controlCenter.returnFromItemSelection = true
+                        //self.controlCenter.returnFromItemSelection = true
                         //CONVERT ITEM INTO AN ARRAY
-                        let string = self.controlCenter.currentItem
-                        let keyValue = self.controlCenter.currentItem
-                        
+                        let string = currentItem
+                        let keyValue = currentItem
+                        print("Shrink")
              
                       //  let key = keyValue.components(separatedBy: ":")[0]
-                        let value = keyValue.components(separatedBy: ":")[1]
-                        print("Here is your value \(value)")
+                        print(keyValue.components)
+                        //let value = keyValue.components(separatedBy: ":")[1]
+                      //  print("Here is your value \(value)")
 
                         self.itemArray = string.components(separatedBy: "\n")
                         self.itemArray = self.itemArray.dropLast()

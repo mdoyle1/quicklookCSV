@@ -15,6 +15,9 @@ struct CSVList: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var controlCenter: ControlCenter
     @ObservedObject var recognizedText: RecognizedText = RecognizedText()
+    @ObservedObject var connectivityProvider: ViewModel = ViewModel(connectivityProvider: ConnectivityProvider())
+   // @ObservedObject var viewModel:ViewModel
+    
     @State var array: [String] = []
     @State var text:String = ""
     @State var fontSize:CGFloat = 10
@@ -199,7 +202,8 @@ struct CSVList: View {
                                 
                                 })
                         }){Image(systemName: "doc.on.clipboard.fill").padding(.init(top: 0, leading: 8, bottom: 0, trailing: 8))}
-                        
+                        //MARK:- SEARCH BAR
+                    
                         SearchBar(controlCenter: self._controlCenter, text: self.$text, array: self.$array)
                             .contextMenu {
                                 //MARK: - BARCODE SCAN
@@ -225,6 +229,8 @@ struct CSVList: View {
                         
                     }
                     
+                   // Button(action:{print(self.controlCenter.initialList)}){Text("Button")}
+                    
                     //MARK: -INITIAL LIST
                     List{
                         if self.controlCenter.selectedHeaders.count == 0 && self.controlCenter.ShowStateArray == false{
@@ -232,8 +238,10 @@ struct CSVList: View {
                             if self.controlCenter.showInitialList{
                                // InitialListView()
                                 ForEach(0..<self.controlCenter.initialList.count, id:\.self) { item in
-                                    NavigationLink(destination:ItemView().onAppear{
+                                    NavigationLink(destination:ItemView(currentItem: self.controlCenter.initialList[item], headers: self.controlCenter.headers, selectedHeaders: self.controlCenter.selectedHeaders).onAppear{
                                         self.controlCenter.currentItem = self.controlCenter.initialList[item]
+                                      //  currentArray = [self.controlCenter.initialList[item]]
+                                        
                                         print("accessed from initialList")
                                         })
                                     {Text(self.controlCenter.initialList[item]).font(.system(size: self.controlCenter.fontSize))}
@@ -245,7 +253,7 @@ struct CSVList: View {
                         else if self.controlCenter.selectedHeaders.count != 0 && self.controlCenter.ShowStateArray == false {
                             //ModifiedListView()
                             ForEach(0..<self.controlCenter.modifiedList.count, id:\.self) { item in
-                                       NavigationLink(destination:ItemView().onAppear{
+                                NavigationLink(destination:ItemView(currentItem: self.controlCenter.initialList[item], headers: self.controlCenter.headers, selectedHeaders: self.controlCenter.selectedHeaders).onAppear{
                                            self.controlCenter.currentItem = self.controlCenter.modifiedList[item]
                                             print("accessed from modifiedList")
                                           
@@ -254,17 +262,19 @@ struct CSVList: View {
                                        }.onDelete(perform: self.removeItems)
                         }
                             
-                            
+                           //MARK: - SHOW SORTED ARRAY
                         else if self.controlCenter.ShowStateArray {
 //                            StateArrayView(array: self.array, text: self.text)
                             ForEach(0..<self.array.count, id:\.self) { item in
-                                    NavigationLink(destination:ItemView().onAppear{
+                                    NavigationLink(destination:ItemView(currentItem: self.array[item], headers: self.controlCenter.headers, selectedHeaders: self.controlCenter.selectedHeaders).onAppear{
                                         self.controlCenter.currentItem = self.array[item]
-                                          print("accessed from initial list selectedHeaders == [] array != []")
+                                          print("accessed from initial list selectedHeaders Show State Array == [] array != []")
                                         })
                                     {Text(self.array[item]).font(.system(size: self.controlCenter.fontSize))}
                                     }
                             .onDelete(perform: self.removeItems)
+                            
+
                         }
                     }
                    
@@ -285,7 +295,7 @@ struct CSVList: View {
                 
             .resignKeyboardOnDragGesture()
             .navigationBarBackButtonHidden(true)
-            .navigationBarTitle(Text(self.controlCenter.fileName).font(.headline), displayMode:  .inline)
+            .navigationBarTitle(Text(self.controlCenter.fileName), displayMode:  .inline)
             .navigationBarItems(leading: HStack{
                 
                 Button(action:{
@@ -295,13 +305,22 @@ struct CSVList: View {
                     resetBools(control: self.controlCenter)
                     self.controlCenter.newFileIsActive = false
                     self.controlCenter.isActive = false
+                    getFiles(control: self.controlCenter,completion: {print("Files Fetched")})
                     self.presentationMode.wrappedValue.dismiss()
                 }){
                     Image(systemName: "chevron.left")
-                    Text("Back")}
+                    Text("Back")}.padding(.trailing, 10)
+                
+                Button(action: {
+                    connectivityProvider.sendList()
+                    
+                }){Image(systemName:"applewatch").font(.system(size: 20))}.environmentObject(controlCenter)
+                
             } , trailing: TopNavbarButtons().environmentObject(self.controlCenter))
                 
                 .onAppear{
+                   
+                    print(self.controlCenter.initialList)
                     print("returnFromItemSelection \(self.controlCenter.returnFromItemSelection)")
                     print("headersViewAccessed \(self.controlCenter.headersViewAccessed)")
                     print("returnFromSave \(self.controlCenter.returnFromSave)")
@@ -329,6 +348,7 @@ struct CSVList: View {
                         self.controlCenter.loading = true
                         self.text = self.controlCenter.searchTerm
                         print(self.controlCenter.returnFromSave)
+                        print(self.controlCenter.initialList.count)
                         print("First Load")
                         csvToList(control: self.controlCenter, completion: {
                             self.controlCenter.headersViewAccessed = false
@@ -336,6 +356,8 @@ struct CSVList: View {
                             // self.$controlCenter.searchTerm.wrappedValue = ""
                             self.controlCenter.arrayCount=self.controlCenter.initialList.count
                             // print(self.controlCenter.arrayCount)
+                            connectivityProvider.sendList()
+                           // connectivityProvider.sendMessage()
                             print("First Load")
                         })
                         
@@ -377,8 +399,7 @@ struct CSVList: View {
             //MARK: - BARCODE SCANNER
                 .sheet(isPresented: self.$controlCenter.isShowingScanner) {
                     if self.isShowingTextRecognition {
-                        ScanningView(recognizedText: self.$text, array: self.$array).environmentObject(self.controlCenter).environmentObject(self.controlCenter)
-                    }
+                        ScanningView(recognizedText: self.$text).environmentObject(self.controlCenter)                    }
                     else{
                         CodeScannerView(codeTypes: [.ean8, .ean13, .pdf417, .upce, .code39], simulatedData: "Test",completion: self.handleScan)}
             }

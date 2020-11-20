@@ -13,10 +13,6 @@ import SwiftCSV
 var csvData:[[String]]!
 var formatedList:[String] = []
 
-struct CSVData {
-    var id = UUID()
-    var Items: [String:String]
-}
 
 func csvToList(control: ControlCenter, completion: @escaping () -> ()){
     
@@ -71,7 +67,9 @@ func csvToList(control: ControlCenter, completion: @escaping () -> ()){
         control.listIsLoaded = true
         control.arrayCount=control.initialList.count
         print("HERE IS YOUR INITIAL TUPLE COUNT \(control.initialTuple.count)")
+        completion()
     }
+   
 }
 
 

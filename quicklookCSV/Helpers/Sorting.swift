@@ -75,10 +75,15 @@ func sortedItems(control:ControlCenter){
             print("empty item")
         }else{
         control.initialList.append(items)
+            
         //control.modifiedList.append(items)
         print("")
         }
     }
+    print("Here is your initial list count \(control.initialList.count)")
+    
+//MARK:- DATA TO SEND TO WATCH
+    currentArray = control.initialList
 }
 
 
@@ -178,7 +183,7 @@ func sortedSelectedItems(control:ControlCenter, completion: @escaping () -> ()){
         if items == "" {
             print("empty")
         }else{
-          
+            
             control.modifiedList.append(items)
         }
     }
@@ -194,16 +199,16 @@ func exportSelections(control: ControlCenter){
                 }
             }
         }
-    }  }
+    }
+}
 
 
 func buildHeaderList(header: String, control: ControlCenter, completion: @escaping () -> ()){
     if control.selectedHeaders.contains(header){
         
         control.selectedHeaders.removeAll{ $0 == header }
-   
-    } else {control.selectedHeaders.append(header)
         
+    } else {control.selectedHeaders.append(header)
     }
     print(control.selectedHeaders)
 }
@@ -217,40 +222,21 @@ func resetHeaders(control: ControlCenter){
         let key = item.key
         control.updatedHeaderNames[item.key] = key
         control.headers.append(key)
-        
     }
     print(control.headers)
     print(control.updatedHeaderNames)
 }
 
+
 func pullReset(text: inout String, array: inout [String], control:ControlCenter){
     text = ""
     array = []
     control.searchTerm = ""
-    //self.controlCenter.selectedHeaders.removeAll()
     control.ShowStateArray = false
     control.showInitialList = true
-   control.arrayCount = control.initialList.count
-    //print(control.modifiedList.count)
+    control.arrayCount = control.initialList.count
     array.removeAll()
-//    if control.modifiedList.count == 0 {
-//        array = control.initialList
-//    }else {
-//        array = control.initialList}
-//    
 }
-//func keyValueItem(control: ControlCenter){
-//    let string = control.currentItem
-//    let keyValue = control.currentItem
-//    var key = ""
-//    var value = ""
-//    key = keyValue.components(separatedBy: ":")[0]
-//   // value = keyValue.components(separatedBy: ":")[1]
-//    print("Here is your key \(key)")
-//    print("Here is your value \(value)")
-//    control.itemArray = string.components(separatedBy: "\n")
-//    print(control.itemArray[0])
-//}
 
 
 

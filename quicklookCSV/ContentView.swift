@@ -18,10 +18,13 @@ struct ContentView: View {
     
     @EnvironmentObject var controlCenter: ControlCenter
     @ObservedObject var defaults = Defaults()
+    @ObservedObject var viewModel:ViewModel
+    @ObservedObject var connectivityProvider: ViewModel = ViewModel(connectivityProvider: ConnectivityProvider())
     @State private var loading = true
     @State private var loadingText = "Quicklook"
     @State private var selection:String? = nil
     @State var isActive:Bool = false
+    @State var firstTimeView:Bool = true
     
     var fileURLs:[URL] = []
     
@@ -38,19 +41,28 @@ struct ContentView: View {
             if self.controlCenter.newFileIsActive == false {
                 if self.controlCenter.recentFiles.count != 0 {
                     //MARK: - FILES
-                    LocalAndCloudFiles().environmentObject(self.controlCenter)
+                    LocalAndCloudFiles()
                         .onAppear{print("LocalAndCloudFilesView")
+                            
+                            if firstTimeView {
                             initializeItems(control: self.controlCenter)
                             emptyArrays(control: self.controlCenter)
                             resetBools(control: self.controlCenter)
                             getFiles(control: self.controlCenter,completion: {print("Files Fetched")})
+                            }
+                            
+                            firstTimeView = false
                     }
                     .navigationBarTitle(Text("Recent Files..."), displayMode: .automatic)
                         
                     //MARK: - TOPNAV BAR ITEMS
                     .navigationBarItems(leading:         HStack{
                         ImportButton().padding(.trailing, 10)
-                        Button(action: {self.controlCenter.newFileIsActive = true}){Image(systemName: "plus.square").font(.system(size: 20))}
+                        Button(action: {self.controlCenter.newFileIsActive = true}){Image(systemName: "plus.square").font(.system(size: 20))}.padding(.trailing, 10)
+                        
+                        Button(action: {
+                            viewModel.sendListNames()
+                        }){Image(systemName:"applewatch").font(.system(size: 20))}.environmentObject(controlCenter)
                     }, trailing: Logo())
                     
                 } else {
@@ -77,7 +89,11 @@ struct ContentView: View {
             initializeItems(control: self.controlCenter)
             emptyArrays(control: self.controlCenter)
             resetBools(control: self.controlCenter)
-            getFiles(control: self.controlCenter,completion: {print("Files Fetched")})
+            getFiles(control: self.controlCenter,completion: {
+                        print("Files Fetched")
+               
+                connectivityProvider.sendListNames()
+            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

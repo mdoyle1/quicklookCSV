@@ -10,11 +10,12 @@ import Combine
 struct ScanningView: UIViewControllerRepresentable {
     
     @Binding var recognizedText: String
+    @EnvironmentObject var controlCenter: ControlCenter
     
     typealias UIViewControllerType = VNDocumentCameraViewController
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(recognizedText: $recognizedText)
+        return Coordinator(recognizedText: $recognizedText, controlCenter: _controlCenter)
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScanningView>) -> VNDocumentCameraViewController {
@@ -28,13 +29,14 @@ struct ScanningView: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
-        
+        @EnvironmentObject var controlCenter: ControlCenter
         var recognizedText: Binding<String>
         private let textRecognizer: TextRecognizer
         
-        init(recognizedText: Binding<String>) {
+        init(recognizedText: Binding<String>, controlCenter: EnvironmentObject<ControlCenter>) {
             self.recognizedText = recognizedText
             textRecognizer = TextRecognizer(recognizedText: recognizedText)
+            _controlCenter = controlCenter
         }
                 
         public func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
@@ -45,7 +47,7 @@ struct ScanningView: UIViewControllerRepresentable {
                     images.append(cgImage)
                 }
             }
-            textRecognizer.recognizeText(from: images)
+            textRecognizer.recognizeText(from: images, control: controlCenter)
             controller.navigationController?.popViewController(animated: true)
         }
         

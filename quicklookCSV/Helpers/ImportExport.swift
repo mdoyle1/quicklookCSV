@@ -10,8 +10,10 @@ import Foundation
 import SwiftUI
 
 //GETS FILES IN THE DOCUMENTS FOLDER
+var listOfFileNames:[String] = []
+
 func getFiles(control: ControlCenter, completion: @escaping () -> ()){
-    
+    listOfFileNames = []
     control.urlFileNames.removeAll()
     control.recentFiles.removeAll()
 
@@ -31,9 +33,13 @@ func getFiles(control: ControlCenter, completion: @escaping () -> ()){
         if file == "" {print("Blank Item")}else{
             if file[file.index(file.startIndex, offsetBy:0)] != "." {
                 control.urlFileNames.append(LocalCloudFiles(url: item, file: item.lastPathComponent, cloud: false))
+                listOfFileNames.append(item.lastPathComponent)
+                print(LocalCloudFiles(url: item, file: item.lastPathComponent, cloud: false))
             }else{
                 control.urlFileNames.append(LocalCloudFiles(url: item, file: item.lastPathComponent, cloud: true))
+                listOfFileNames.append(item.lastPathComponent)
                 print(item.lastPathComponent)
+                
                 
             }
         }
@@ -41,7 +47,8 @@ func getFiles(control: ControlCenter, completion: @escaping () -> ()){
     }
     //  control.urlFileNames = control.urlFileNames.sorted {$0.file < $1.file}
     print(control.urlFileNames)
-    
+    completion()
+        
 }
 
 
@@ -80,6 +87,7 @@ func writeDataToFile(file:String, row:String){
 
 
 //GET CONTENTS OF FILE AND CREATE A NEW FILE IN DOCUMENTS FOLDER.
+#if os(iOS)
 func importItems(control:ControlCenter, filename: String, completion: @escaping () -> ()){
     var csv = ""
     var headerRow = ""
@@ -114,7 +122,7 @@ func importItems(control:ControlCenter, filename: String, completion: @escaping 
     writeDataToFile(file: "\(filename)", row: csv)
     print(csv)
 }
-
+#endif
 
 
 func exportOrCompressCSV(control:ControlCenter, exportFile:Bool, filterString: String, fileName: String, completion: @escaping () -> ()){
@@ -449,18 +457,11 @@ func downloadFile(control: ControlCenter, url: URL, completion: @escaping () -> 
 }
 
 func downloadCloudFile (control: ControlCenter, fileURL: URL, completion: @escaping () -> ()){
-    
-    
-    
     let lastPathComponent = fileURL.lastPathComponent
     let fileName =  lastPathComponent.replacingOccurrences(of: ".icloud", with: "").dropFirst()
     control.loadingText = "Fetching \(fileName)"
     control.loading = true
     if lastPathComponent.contains(".icloud") {
-        // Delete the "." which is at the beginning of the file name
-        
-        // let fileName =  lastPathComponent.replacingOccurrences(of: ".icloud", with: "").dropFirst()
-        
         print("HERE IS YOUR FILE \(fileName)")
         let folderPath = fileURL.deletingLastPathComponent().path.replacingOccurrences(of: " ", with: "%20")
         print("HERE IS THE FOLDERPATH \(folderPath)")
@@ -473,13 +474,10 @@ func downloadCloudFile (control: ControlCenter, fileURL: URL, completion: @escap
                 
                 print("Downloaded File")
                 print(downloadedFilePath)
-                
             }
         })
-        
     }
     completion()
-    
 }
 
 

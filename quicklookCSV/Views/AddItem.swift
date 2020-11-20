@@ -136,8 +136,7 @@ struct AddItem: View {
                 //MARK: - BARCODE SCANNER 
                 .sheet(isPresented: self.$controlCenter.isShowingScanner) {
                     if self.isShowingTextRecognition {
-                        
-                        ScanningView(recognizedText: self.$recognizedText.value, array: self.$itemArray).environmentObject(self.controlCenter)
+                        ScanningView(recognizedText: self.$recognizedText.value).environmentObject(self.controlCenter)
                     }
                     else{
                         CodeScannerView(codeTypes: [.ean8, .ean13, .pdf417, .upce, .code39], simulatedData: "Test",completion: self.handleScan)}
